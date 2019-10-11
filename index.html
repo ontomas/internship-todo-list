@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo List</title>
+    <script src="https://kit.fontawesome.com/eab8c3459d.js"></script>
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel|Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2 id="showDay"></h2>
+        <p id="showDate"></p>
+        <form class="form">
+          <input
+            class="todo-input"
+            type="text"
+            placeholder="E.g. Become an intern"
+          />
+          <input class="todo-button" type="submit" value="Submit" />
+        </form>
+        <ul class="todo-list"></ul>
+        <!-- Only when the list is empty -->
+        <div class="empty-state">
+          <img class="empty-icon" src="assets/img/tumbleweed.png" alt="" />
+          <h2 class="empty-state__title">Add your first Todo</h2>
+          <p class="empty-state__description">
+            What do you want to get done today?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

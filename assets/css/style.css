@@ -1,0 +1,178 @@
+/* Global */
+
+:root {
+  --primary-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #007991;
+  background: -webkit-linear-gradient(to top, #78ffd6, #007991);
+  background: linear-gradient(to top, #78ffd6, #007991);
+  height: 100vh;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  max-width: 400px;
+}
+
+#showDay {
+  text-align: center;
+  padding-top: 1rem;
+  font-family: "Abel", sans-serif;
+}
+
+#showDate {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Form */
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-input,
+.todo-button {
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  border: 0;
+  outline: none;
+  margin: 0.25rem;
+}
+
+.todo-button:hover {
+  background: #007991;
+  color: #fff;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  padding: 0.2rem;
+  position: relative;
+  padding-left: 2.5rem;
+  border-top: 1px solid #ccc;
+  display: flex;
+}
+
+.todo-item:first-child {
+  border-top: none;
+}
+
+/* When the list is empty */
+
+.empty-icon {
+  width: 80px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 1rem;
+  display: none;
+}
+
+.todo-list:empty {
+  display: none;
+}
+
+.todo-list:empty + .empty-state {
+  display: block;
+}
+
+/* Utilities */
+
+.done {
+  text-decoration: line-through;
+}
+
+/* Delete button */
+
+.delete-todo {
+  border: none;
+  background: none;
+  margin-left: auto;
+  padding: 0.25rem;
+  outline: none;
+}
+
+.delete-todo i {
+  color: #000000;
+}
+
+/* Checkmark */
+
+.tick {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 25px;
+  transition: 0.5s;
+  border: 1px solid #999;
+  margin-left: 0.5rem;
+}
+
+.checkmark:hover {
+  background-color: #eee;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.done .checkmark:after {
+  display: block;
+}
+
+.todo-item .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--primary-color);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Avoid icon interference with the button */
+button > * {
+  pointer-events: none;
+}
